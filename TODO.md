@@ -1,0 +1,29 @@
+# ToDo
+
+- scaffold solutions
+  - domain, app, infra, web
+  - domain unit tests, app unit tests, app integration tests
+- begin populating solutions
+  - domain, app - simple
+  - infra - understand dependencies
+  - web - really understand dependencies
+- create empty template and test
+- create empty react app in web project
+  - compare against reference project
+  - understand differences
+  - test api code generation
+  - test api consumption in react app
+- web stuff
+  - nswag for API
+    - can i view API in swagger UI even in web app?
+  - nswag for client app
+- .editorconfig - respected by vscode?
+-
+- examine reference for anything unknown - list below
+- unknowns
+  - what are the .liquid files?
+  - .azure/bicep
+  - .github
+  - .scripts - appear to be for deployment - may scrap for now and incorporate later
+  - global.json
+  - test adding packages at sln level - what is right way to do this?
