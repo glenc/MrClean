@@ -29,3 +29,14 @@
   - [ ] each folder in web project - diff between web api only vs. w/ client app
   - [ ] .http files - where do they come from?
   - [ ] .nswag file differences - need to understand this
+
+## On Deck
+
+- [ ] Clean solution scaffold
+  - [ ] Empty classlib projects (app and tests) - no webapi
+  - [ ] global.json?
+  - [ ] solution dependencies
+  - [ ] solution builds with dotnet build
+  - [ ] solution tests with dotnet test
+  - [ ] turn into solution template
+- [ ] Dive in to web solution reference vs. clean comparison
