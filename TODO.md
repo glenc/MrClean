@@ -36,9 +36,10 @@
   - [ ] Empty classlib projects (app and tests) - no webapi
     - [x] src/Domain
     - [x] src/Application
-    - [ ] src/Infrastructure (incomplete)
+    - [ ] src/Infrastructure (partial)
     - [x] tests/Domain.UnitTests
     - [x] tests/Application.UnitTests
+    - [x] tests/Application.FunctionalTests (partial)
   - [x] global.json?
   - [x] solution dependencies
   - [x] solution builds with dotnet build
@@ -47,4 +48,5 @@
 - [ ] Dive in to web solution reference vs. clean comparison
 - [ ] Finish scaffold
   - [ ] src/Web
-  - [ ] tests/Application.FunctionalTests (incomplete)
+  - [ ] src/Infrastructure (complete)
+  - [ ] tests/Application.FunctionalTests (complete)

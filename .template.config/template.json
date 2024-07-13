@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "glenc",
+  "classifications": ["Web", "SPA", "ASP.NET", "Clean Architecture"],
+  "name": "MrClean Solution",
+  "description": "A solution template for creating a Clean Architecture-based application (SPA or API only) using ASP.NET Core (based on https://github.com/jasontaylordev/CleanArchitecture)",
+  "identity": "MrClean.Solution.CSharp",
+  "groupIdentity": "MrClean.Solution",
+  "shortName": "mrc-sln",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "sourceName": "MrClean",
+  "preferNameDirectory": true,
+  "symbols": {
+    "ClientFramework": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "React",
+          "description": "Use React"
+        },
+        {
+          "choice": "None",
+          "description": "Web API only"
+        }
+      ],
+      "defaultValue": "React",
+      "description": "The client framework to use"
+    },
+    "UseReact": {
+      "type": "computed",
+      "value": "(ClientFramework == \"React\")"
+    },
+    "UseApiOnly": {
+      "type": "computed",
+      "value": "(ClientFramework == \"None\")"
+    }
+  },
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".template.config/**/*",
+        "templates/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json"
+      ],
+      "rename": {
+        "README-template.md": "README.md"
+      }
+    }
+  ]
+}
