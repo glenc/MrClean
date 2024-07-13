@@ -32,8 +32,8 @@
 
 ## On Deck
 
-- [ ] Clean solution scaffold
-  - [ ] Empty classlib projects (app and tests) - no webapi
+- [x] Clean solution scaffold
+  - [x] Empty classlib projects (app and tests) - no webapi
     - [x] src/Domain
     - [x] src/Application
     - [x] src/Infrastructure (partial)
@@ -44,9 +44,17 @@
   - [x] solution dependencies
   - [x] solution builds with dotnet build
   - [x] solution tests with dotnet test
-  - [ ] turn into solution template
+  - [x] turn into solution template
 - [ ] Dive in to web solution reference vs. clean comparison
 - [ ] Finish scaffold
   - [ ] src/Web
   - [ ] src/Infrastructure (complete)
   - [ ] tests/Application.FunctionalTests (complete)
+- [ ] Populate scaffold
+  - [ ] entities etc and tests
+  - [ ] db migration stuff
+- [ ] Add template actions
+  - [ ] use case
+  - [ ] use case tests
+  - [ ] entity
+  - [ ] entity test
