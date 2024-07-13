@@ -34,9 +34,17 @@
 
 - [ ] Clean solution scaffold
   - [ ] Empty classlib projects (app and tests) - no webapi
-  - [ ] global.json?
-  - [ ] solution dependencies
-  - [ ] solution builds with dotnet build
-  - [ ] solution tests with dotnet test
+    - [x] src/Domain
+    - [x] src/Application
+    - [ ] src/Infrastructure (incomplete)
+    - [x] tests/Domain.UnitTests
+    - [x] tests/Application.UnitTests
+  - [x] global.json?
+  - [x] solution dependencies
+  - [x] solution builds with dotnet build
+  - [x] solution tests with dotnet test
   - [ ] turn into solution template
 - [ ] Dive in to web solution reference vs. clean comparison
+- [ ] Finish scaffold
+  - [ ] src/Web
+  - [ ] tests/Application.FunctionalTests (incomplete)
