@@ -36,7 +36,7 @@
   - [ ] Empty classlib projects (app and tests) - no webapi
     - [x] src/Domain
     - [x] src/Application
-    - [ ] src/Infrastructure (partial)
+    - [x] src/Infrastructure (partial)
     - [x] tests/Domain.UnitTests
     - [x] tests/Application.UnitTests
     - [x] tests/Application.FunctionalTests (partial)
