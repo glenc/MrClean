@@ -7,7 +7,7 @@
   - [ ] domain, app - simple
   - [ ] infra - understand dependencies
   - [ ] web - really understand dependencies
-- [ ] create empty template and test
+- [x] create empty template and test
 - [ ] create empty react app in web project
   - [ ] compare against reference project
   - [ ] understand differences
@@ -20,12 +20,12 @@
 - [x] .editorconfig - respected by vscode? - seems to be working with vscode extension - also prettier ext
 - [ ] examine reference for anything unknown - list below
 - [ ] unknowns
-  - [ ] what are the .liquid files?
+  - [ ] what are the .liquid files? - used by nswag - do i add them or are they auto generated?
   - [ ] .azure/bicep
   - [ ] .github
   - [ ] .scripts - appear to be for deployment - may scrap for now and incorporate later
-  - [ ] global.json
-  - [ ] test adding packages at sln level - what is right way to do this?
+  - [x] global.json
+  - [x] test adding packages at sln level - what is right way to do this?
   - [ ] each folder in web project - diff between web api only vs. w/ client app
   - [ ] .http files - where do they come from?
   - [ ] .nswag file differences - need to understand this
