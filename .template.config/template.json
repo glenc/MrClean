@@ -50,7 +50,9 @@
         "templates/**/*",
         "**/*.filelist",
         "**/*.user",
-        "**/*.lock.json"
+        "**/*.lock.json",
+        "LICENSE",
+        "TODO.md"
       ],
       "rename": {
         "README-template.md": "README.md"
