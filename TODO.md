@@ -46,6 +46,10 @@
   - [x] solution tests with dotnet test
   - [x] turn into solution template
 - [ ] Dive in to web solution reference vs. clean comparison
+- [ ] Try to start picking apart the default web solution
+  - [ ] Remove dependencies, see what breaks
+  - [ ] Try using typescript
+  - [ ] Call generated API
 - [ ] Finish scaffold
   - [ ] src/Web
   - [ ] src/Infrastructure (complete)
