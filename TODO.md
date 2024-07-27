@@ -74,4 +74,9 @@
 - [ ] Web api project
   - [ ] Swagger from scratch
 - [ ] MPA - Razor?
+  - [ ] Multiple SPAs
 - [ ] API code gen - figure this out
+- [ ] Web api standalone + SPA/MPA? simple react app or vscode project?
+- [ ] Finalize arch approach and template options
+  - MPA vs. SPA
+  - Project architecture
