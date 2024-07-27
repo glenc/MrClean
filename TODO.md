@@ -62,3 +62,16 @@
   - [ ] use case tests
   - [ ] entity
   - [ ] entity test
+
+## Web Stuff
+
+- [ ] Empty web project w/ vite, react, ts
+  - [x] Vite packaging
+  - [x] Simple API from react
+  - [ ] HTTPS
+  - [ ] HMR
+  - [ ] Authentication? or wait for later
+- [ ] Web api project
+  - [ ] Swagger from scratch
+- [ ] MPA - Razor?
+- [ ] API code gen - figure this out
