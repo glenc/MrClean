@@ -19,7 +19,9 @@
   - [x] Try using typescript
   - [x] Call generated API
 - [ ] Finish scaffold
-  - [ ] src/Web
+  - [ ] src/WebApi, src/WebClient
+    - [ ] CORS
+    - [ ] Auth
   - [ ] src/Infrastructure (complete)
   - [ ] tests/Application.FunctionalTests (complete)
 - [ ] Populate scaffold
