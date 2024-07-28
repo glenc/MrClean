@@ -51,6 +51,9 @@
         "**/*.filelist",
         "**/*.user",
         "**/*.lock.json",
+        "**/node_modules/**",
+        "**/wwwroot/**",
+        "src/WebClient/src/api-client.ts",
         "LICENSE",
         "TODO.md"
       ],

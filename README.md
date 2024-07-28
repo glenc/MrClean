@@ -25,6 +25,10 @@ Creating a new application with React and SQLite
 
 ```bash
 dotnet new mrc-sln -n MyApplication --client-framework React --use-sqlite
+cd MyApplication
+dotnet build
+cd src/WebClient
+npm install
 ```
 
 Creating a new application as API only and SQLite
