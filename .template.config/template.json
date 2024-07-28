@@ -54,6 +54,7 @@
         "**/node_modules/**",
         "**/wwwroot/**",
         "src/WebClient/src/api-client.ts",
+        "**/app.db",
         "LICENSE",
         "TODO.md"
       ],
