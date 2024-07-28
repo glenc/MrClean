@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Glen Cooper",
+    "classifications": [
+        "Clean Architecture"
+    ],
+    "name": "Mr Clean Use Case Test",
+    "description": "Create a new use case test",
+    "identity": "MrClean.Solution.Tests.UseCase.CSharp",
+    "groupIdentity": "MrClean.Solution.Tests.UseCase",
+    "shortName": "mrc-usecase-test",
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    },
+    "sourceName": "MrCleanUseCase",
+    "preferNameDirectory": false,
+    "symbols": {
+        "DefaultNamespace": {
+            "type": "bind",
+            "binding": "msbuild:RootNamespace",
+            "replaces": "MrClean",
+            "defaultValue": "MrClean"
+        },
+        "featureName": {
+            "type": "parameter",
+            "datatype": "string",
+            "isRequired": true,
+            "replaces": "FeatureName",
+            "fileRename": "FeatureName"
+        },
+        "useCaseType": {
+            "type": "parameter",
+            "datatype": "choice",
+            "isRequired": true,
+            "choices": [
+                {
+                    "choice": "command",
+                    "description": "Create a new command test"
+                },
+                {
+                    "choice": "query",
+                    "description": "Create a new query test"
+                }
+            ],
+            "description": "The type of use case test to create"
+        },
+        "createCommand": {
+            "type": "computed",
+            "value": "(useCaseType == \"command\")"
+        },
+        "createQuery": {
+            "type": "computed",
+            "value": "(useCaseType == \"query\")"
+        },
+        "returnType": {
+            "type": "parameter",
+            "datatype": "string",
+            "isRequired": false,
+            "replaces": "ReturnType",
+            "fileRename": "ReturnType",
+            "defaultValue": "object"
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "condition": "(createCommand)",
+                    "exclude": [
+                        "FeatureName/Queries/**/*"
+                    ]
+                },
+                {
+                    "condition": "(createQuery)",
+                    "exclude": [
+                        "FeatureName/Commands/**/*"
+                    ]
+                }
+            ]
+        }
+    ]
+}

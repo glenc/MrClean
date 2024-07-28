@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Glen Cooper",
+    "classifications": [
+        "Clean Architecture"
+    ],
+    "name": "Mr Clean Entity",
+    "description": "Create a new entity",
+    "identity": "MrClean.Solution.Entity.CSharp",
+    "groupIdentity": "MrClean.Solution.Entity",
+    "shortName": "mrc-entity",
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    },
+    "sourceName": "MrCleanEntity",
+    "preferNameDirectory": false,
+    "symbols": {
+        "DefaultNamespace": {
+            "type": "bind",
+            "binding": "msbuild:RootNamespace",
+            "replaces": "MrClean",
+            "defaultValue": "MrClean"
+        }
+    }
+}

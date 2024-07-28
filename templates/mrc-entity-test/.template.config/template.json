@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Glen Cooper",
+  "classifications": [
+    "Clean Architecture"
+  ],
+  "name": "Mr Clean Entity Test",
+  "description": "Create a new entity test",
+  "identity": "MrClean.Solution.Tests.Entity.CSharp",
+  "groupIdentity": "MrClean.Solution.Tests.Entity",
+  "shortName": "mrc-entity-test",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "MrCleanEntity",
+  "preferNameDirectory": false,
+  "symbols": {
+    "DefaultNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "MrClean",
+      "defaultValue": "MrClean"
+    }
+  }
+}

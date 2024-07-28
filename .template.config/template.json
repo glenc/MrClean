@@ -56,7 +56,8 @@
         "src/WebClient/src/api-client.ts",
         "**/app.db",
         "LICENSE",
-        "TODO.md"
+        "TODO.md",
+        ".git/**/*"
       ],
       "rename": {
         "README-template.md": "README.md"
