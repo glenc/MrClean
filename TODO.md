@@ -1,37 +1,5 @@
 # ToDo
 
-- [ ] scaffold solutions
-  - [ ] domain, app, infra, web
-  - [ ] domain unit tests, app unit tests, app integration tests
-- [ ] begin populating solutions
-  - [ ] domain, app - simple
-  - [ ] infra - understand dependencies
-  - [ ] web - really understand dependencies
-- [x] create empty template and test
-- [ ] create empty react app in web project
-  - [ ] compare against reference project
-  - [ ] understand differences
-  - [ ] test api code generation
-  - [ ] test api consumption in react app
-- [ ] web stuff
-  - [ ] nswag for API
-    - [ ] can i view API in swagger UI even in web app?
-  - [ ] nswag for client app
-- [x] .editorconfig - respected by vscode? - seems to be working with vscode extension - also prettier ext
-- [ ] examine reference for anything unknown - list below
-- [ ] unknowns
-  - [ ] what are the .liquid files? - used by nswag - do i add them or are they auto generated?
-  - [ ] .azure/bicep
-  - [ ] .github
-  - [ ] .scripts - appear to be for deployment - may scrap for now and incorporate later
-  - [x] global.json
-  - [x] test adding packages at sln level - what is right way to do this?
-  - [ ] each folder in web project - diff between web api only vs. w/ client app
-  - [ ] .http files - where do they come from?
-  - [ ] .nswag file differences - need to understand this
-
-## On Deck
-
 - [x] Clean solution scaffold
   - [x] Empty classlib projects (app and tests) - no webapi
     - [x] src/Domain
@@ -45,11 +13,11 @@
   - [x] solution builds with dotnet build
   - [x] solution tests with dotnet test
   - [x] turn into solution template
-- [ ] Dive in to web solution reference vs. clean comparison
-- [ ] Try to start picking apart the default web solution
-  - [ ] Remove dependencies, see what breaks
-  - [ ] Try using typescript
-  - [ ] Call generated API
+- [x] Dive in to web solution reference vs. clean comparison
+- [x] Try to start picking apart the default web solution
+  - [x] Remove dependencies, see what breaks
+  - [x] Try using typescript
+  - [x] Call generated API
 - [ ] Finish scaffold
   - [ ] src/Web
   - [ ] src/Infrastructure (complete)
@@ -65,18 +33,26 @@
 
 ## Web Stuff
 
-- [ ] Empty web project w/ vite, react, ts
+- [x] Empty web project w/ vite, react, ts
   - [x] Vite packaging
   - [x] Simple API from react
-  - [ ] HTTPS
+  - [x] HTTPS
   - [ ] HMR
   - [ ] Authentication? or wait for later
+  - [x] Screw all this, just separate API and Vite/React projects
 - [ ] Web api project
-  - [ ] Swagger from scratch
-- [ ] MPA - Razor?
-  - [ ] Multiple SPAs
-- [ ] API code gen - figure this out
-- [ ] Web api standalone + SPA/MPA? simple react app or vscode project?
+  - [x] Swagger from scratch
+    - [ ] Swagger w/ authentication
+- [x] API code gen - a bit of a hack, build to other project
 - [ ] Finalize arch approach and template options
   - MPA vs. SPA
   - Project architecture
+
+## Backlog
+
+- [ ] MPA
+  - [ ] Razor
+  - [ ] MVC
+  - [ ] Multiple PSAs
+- [ ] API Code Gen - load by URL? is this a good idea?
+- [ ] Autogen .http files? do i care?
