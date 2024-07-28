@@ -24,4 +24,8 @@
     <PackageReference Include="Testcontainers.MsSql" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\WebApi\WebApi.csproj" />
+  </ItemGroup>
+
 </Project>
