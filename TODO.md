@@ -22,16 +22,16 @@
   - [ ] src/WebApi, src/WebClient
     - [ ] CORS
     - [ ] Auth
-  - [ ] src/Infrastructure (complete)
-  - [ ] tests/Application.FunctionalTests (complete)
-- [ ] Populate scaffold
-  - [ ] entities etc and tests
-  - [ ] db migration stuff
-- [ ] Add template actions
-  - [ ] use case
-  - [ ] use case tests
-  - [ ] entity
-  - [ ] entity test
+  - [x] src/Infrastructure (complete)
+  - [x] tests/Application.FunctionalTests (complete)
+- [x] Populate scaffold
+  - [x] entities etc and tests
+  - [x] db migration stuff
+- [x] Add template actions
+  - [x] use case
+  - [x] use case tests
+  - [x] entity
+  - [x] entity test
 
 ## Web Stuff
 
