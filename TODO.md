@@ -18,10 +18,10 @@
   - [x] Remove dependencies, see what breaks
   - [x] Try using typescript
   - [x] Call generated API
-- [ ] Finish scaffold
-  - [ ] src/WebApi, src/WebClient
-    - [ ] CORS
-    - [ ] Auth
+- [x] Finish scaffold
+  - [x] src/WebApi, src/WebClient
+    - [x] CORS
+    - [x] Auth
   - [x] src/Infrastructure (complete)
   - [x] tests/Application.FunctionalTests (complete)
 - [x] Populate scaffold
@@ -39,12 +39,12 @@
   - [x] Vite packaging
   - [x] Simple API from react
   - [x] HTTPS
-  - [ ] HMR
+  - [x] HMR
   - [ ] Authentication? or wait for later
   - [x] Screw all this, just separate API and Vite/React projects
 - [ ] Web api project
   - [x] Swagger from scratch
-    - [ ] Swagger w/ authentication
+    - [x] Swagger w/ authentication
 - [x] API code gen - a bit of a hack, build to other project
 - [ ] Finalize arch approach and template options
   - MPA vs. SPA

@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddWebServices();
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -14,6 +15,13 @@ if (app.Environment.IsDevelopment())
 {
     app.UseOpenApi();
     app.UseSwaggerUi();
+
+    // set up cors
+    app.UseCors(policy =>
+    {
+        policy.AllowAnyHeader();
+        policy.WithOrigins("http://localhost:5010");
+    });
 
     // init db
     await app.InitialiseDatabaseAsync();
