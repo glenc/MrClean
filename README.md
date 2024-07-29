@@ -14,34 +14,90 @@ I cannot stress enough that the credit for this solution belongs with [Jason Tay
 
 ## Getting Started
 
-Installing the temaplate
+1. Install the MrClean Template (replace with nuget package eventually)
+
+   ```bash
+   git clone https://github.com/glenc/MrClean
+   cd MrClean
+   dotnet new install .
+   ```
+
+1. Create a new solution using React as the client framework
+
+   ```bash
+   dotnet new mrc-sln -n MyApplication --client-framework React
+   cd MyApplication
+   dotnet run --project src/WebApi
+   ```
+
+   The web api is now running on https://localhost:7000. Open a browser window to view the API documentation.
+
+1. Next, set up and start the client app by opening a new terminal window and entering the following:
+
+   ```bash
+   cd src/WebClient
+   npm install
+   npm run dev
+   ```
+
+   The client app is now running on http://localhost:5010
+
+### Supported Client Frameworks
+
+- React (TypeScript)
+- Vue (TypeScript)
+- None (Web API only)
+
+  ```bash
+  dotnet new mrc-sln -n MyReactApp -cf React
+  dotnet new mrc-sln -n MyVueApp -cf Vue
+  dotnet new mrc-sln -n MyApiOnly -cf None
+  ```
+
+## Scaffolding and Migrations
+
+### Domain Entities
+
+Create a new domain entity and associated unit tests
 
 ```bash
-cd <path to template>
-dotnet new install ./
+dotnet new mrc-entity -n Employee -o src/Domain --project src/Domain/Domain.csproj
+dotnet new mrc-entity-test -n Employee -o tests/Domain.UnitTests --project src/Domain/Domain.csproj
 ```
 
-Creating a new application with React and SQLite
+Or, using VSCode run one of the following tasks:
+
+- **Create Entity** (creates a new entity)
+- **Create Entity Tests** (creates the unit test for a given entity)
+- **Create Entity and Tests** (creates a new entity and associated tests)
+
+### Use Cases (Commands and Queries)
+
+Create a new command use case and associated tests
 
 ```bash
-dotnet new mrc-sln -n MyApplication --client-framework React --use-sqlite
-cd MyApplication
-dotnet build
-cd src/WebClient
-npm install
+dotnet new mrc-usecase -n CreateEmployee -feature-name Employees -usecase-type command -return-type int -o src/Application --project src/Application/Application.csproj
+dotnet new mrc-usecase-test -n CreateEmployee -fn Employees -ut command -rt int -o tests/Application.FunctionalTests --project src/Application/Application.csprojcsproj
 ```
 
-Creating a new application as API only and SQLite
+Create a new query use case which returns an EmployeeList View Model return type
 
 ```bash
-dotnet new mrc-sln -n MyApplication -cf None -us
+dotnet new mrc-usecase -n ListEmployees -fn Employees -ut query -rt EmployeeListVm -o src/Application --project src/Application/Application.csproj
 ```
 
-NOTE: option to use SQLite is still there because eventually I'll need to add SQL Server back in. For now though I'm only doing this for SQLite.
+Or, using VSCode run one of the following tasks:
+
+- **Create Use Case** (creates a new use case)
+- **Create Use Case Tests** (creates the unit test for a given use case)
+- **Create Use Case and Tests** (creates a new use case and associated tests)
+
+### Database Migrations
+
+Create a new migration using the **Create Migration** task in VSCode.
 
 ## NOT SUPPORTED
 
-- Angular UI
 - SQL Server
 - Deployment
 
