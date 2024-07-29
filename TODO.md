@@ -21,7 +21,7 @@
 - [x] Finish scaffold
   - [x] src/WebApi, src/WebClient
     - [x] CORS
-    - [x] Auth
+    - [ ] Auth
   - [x] src/Infrastructure (complete)
   - [x] tests/Application.FunctionalTests (complete)
 - [x] Populate scaffold
@@ -33,23 +33,6 @@
   - [x] entity
   - [x] entity test
 
-## Web Stuff
-
-- [x] Empty web project w/ vite, react, ts
-  - [x] Vite packaging
-  - [x] Simple API from react
-  - [x] HTTPS
-  - [x] HMR
-  - [ ] Authentication? or wait for later
-  - [x] Screw all this, just separate API and Vite/React projects
-- [ ] Web api project
-  - [x] Swagger from scratch
-    - [x] Swagger w/ authentication
-- [x] API code gen - a bit of a hack, build to other project
-- [ ] Finalize arch approach and template options
-  - MPA vs. SPA
-  - Project architecture
-
 ## Backlog
 
 - [ ] MPA
@@ -58,3 +41,8 @@
   - [ ] Multiple PSAs
 - [ ] API Code Gen - load by URL? is this a good idea?
 - [ ] Autogen .http files? do i care?
+- [ ] Client Frameworks
+  - [ ] React
+  - [x] React-ts
+  - [ ] Vue
+  - [x] Vue-ts
