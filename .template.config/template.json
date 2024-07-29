@@ -23,6 +23,10 @@
           "description": "Use React"
         },
         {
+          "choice": "Vue",
+          "description": "Use Vue"
+        },
+        {
           "choice": "None",
           "description": "Web API only"
         }
@@ -33,6 +37,10 @@
     "UseReact": {
       "type": "computed",
       "value": "(ClientFramework == \"React\")"
+    },
+    "UseVue": {
+      "type": "computed",
+      "value": "(ClientFramework == \"Vue\")"
     },
     "UseApiOnly": {
       "type": "computed",
@@ -61,7 +69,24 @@
       ],
       "rename": {
         "README-template.md": "README.md"
-      }
+      },
+      "modifiers": [
+        {
+          "condition": "(UseVue)",
+          "exclude": ["src/WebClient/**"],
+          "rename": {
+            "WebClient-Vue": "WebClient"
+          }
+        },
+        {
+          "condition": "(UseReact)",
+          "exclude": ["src/WebClient-Vue/**"]
+        },
+        {
+          "condition": "(UseApiOnly)",
+          "exclude": ["src/WebClient/**", "src/WebClient-Vue/**"]
+        }
+      ]
     }
   ]
 }
