@@ -33,6 +33,12 @@
   - [x] entity
   - [x] entity test
 
+## Auth Work
+
+- [ ] Login UI
+- [ ] Context and routing
+- [ ] API auth baked in
+
 ## Backlog
 
 - [ ] MPA
