@@ -7,7 +7,9 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
-        services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        services.AddAutoMapper(config => 
+            config.AddMaps(Assembly.GetExecutingAssembly())
+        );
 
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 

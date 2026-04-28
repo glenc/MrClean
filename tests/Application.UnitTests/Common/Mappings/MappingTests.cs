@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using AutoMapper;
+using Microsoft.Extensions.Logging.Abstractions;
 using MrClean.Application.Common.Interfaces;
 using MrClean.Application.Common.Models;
 using MrClean.Domain.Entities;
@@ -16,7 +17,7 @@ public class MappingTests
     public MappingTests()
     {
         _configuration = new MapperConfiguration(config => 
-            config.AddMaps(Assembly.GetAssembly(typeof(IApplicationDbContext))));
+            config.AddMaps(Assembly.GetAssembly(typeof(IApplicationDbContext))), NullLoggerFactory.Instance);
 
         _mapper = _configuration.CreateMapper();
     }
