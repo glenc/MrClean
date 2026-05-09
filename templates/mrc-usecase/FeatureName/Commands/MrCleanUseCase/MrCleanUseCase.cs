@@ -5,7 +5,7 @@ namespace MrClean.FeatureName.Commands.MrCleanUseCase;
 
 public record MrCleanUseCaseCommand : IRequest<ReturnType>
 {
-    public string Name { get; init; } = "";
+    
 }
 
 public class MrCleanUseCaseCommandValidator : AbstractValidator<MrCleanUseCaseCommand>

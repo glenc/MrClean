@@ -9,5 +9,11 @@ public abstract class BaseTestFixture
     public async Task TestSetUp()
     {
         await ResetState();
+        await SeedData();
+    }
+
+    protected virtual async Task SeedData()
+    {
+        await Task.Yield();
     }
 }

@@ -5,6 +5,7 @@ namespace MrClean.FeatureName.Queries.MrCleanUseCase;
 
 public record MrCleanUseCaseQuery : IRequest<ReturnType>
 {
+    public int Id { get; init; }
 }
 
 public class MrCleanUseCaseQueryValidator : AbstractValidator<MrCleanUseCaseQuery>

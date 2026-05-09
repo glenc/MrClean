@@ -10,7 +10,6 @@ public class MrCleanUseCaseTests : BaseTestFixture
     [Test]
     public async Task ShouldRequireMinimumFields()
     {
-        await ResetState();
         var userId = await RunAsDefaultUserAsync();
 
         var query = new MrCleanUseCaseQuery { };
@@ -22,8 +21,6 @@ public class MrCleanUseCaseTests : BaseTestFixture
     [Test]
     public async Task ShouldRequireAuthentication() 
     {
-        await ResetState();
-
         var query = new MrCleanUseCaseQuery { };
 
         await FluentActions.Invoking(() => SendAsync(query))
@@ -33,12 +30,16 @@ public class MrCleanUseCaseTests : BaseTestFixture
     [Test]
     public async Task ShouldReturnValidResult() 
     {
-        await ResetState();
         var userId = await RunAsDefaultUserAsync();
 
         var query = new MrCleanUseCaseQuery { };
         var result = await SendAsync(query);
         
         result.Should().NotBeNull();
+    }
+
+    protected override async Task SeedData()
+    {
+        await base.SeedData();
     }
 }
