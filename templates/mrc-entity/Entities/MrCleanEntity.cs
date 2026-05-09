@@ -9,5 +9,6 @@ public class MrCleanEntity : BaseAuditableEntity
         Name = name;
     }
 
-    public MrCleanEntity() {}
+    // for ef rehydration
+    private MrCleanEntity() {}
 }
