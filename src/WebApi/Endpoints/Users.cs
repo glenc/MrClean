@@ -2,11 +2,13 @@
 
 namespace MrClean.WebApi.Endpoints;
 
-public class Users : EndpointGroupBase
+public class Users : IEndpointGroup
 {
-    public override void Map(WebApplication app)
+    public RouteGroupBuilder MapEndpoints(IEndpointRouteBuilder app)
     {
-        app.MapGroup(this)
-            .MapIdentityApi<ApplicationUser>();
+        var group = app.MapGroup(this);
+        group.MapIdentityApi<ApplicationUser>();
+
+        return group;
     }
 }

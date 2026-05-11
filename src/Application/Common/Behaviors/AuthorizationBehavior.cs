@@ -5,18 +5,11 @@ using MrClean.Application.Common.Security;
 
 namespace MrClean.Application.Common.Behaviors;
 
-public class AuthorizationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
+public class AuthorizationBehavior<TRequest, TResponse>(IUser user, IIdentityService identityService)
+    : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {
-    private readonly IUser _user;
-    private readonly IIdentityService _identityService;
-
-    public AuthorizationBehavior(
-        IUser user,
-        IIdentityService identityService)
-    {
-        _user = user;
-        _identityService = identityService;
-    }
+    private readonly IUser _user = user;
+    private readonly IIdentityService _identityService = identityService;
 
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
@@ -74,6 +67,6 @@ public class AuthorizationBehavior<TRequest, TResponse> : IPipelineBehavior<TReq
         }
 
         // User is authorized / authorization not required
-        return await next();
+        return await next(cancellationToken);
     }
 }

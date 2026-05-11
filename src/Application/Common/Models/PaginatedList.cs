@@ -1,19 +1,8 @@
 ﻿namespace MrClean.Application.Common.Models;
 
-public class PaginatedList<T>
+public record PaginatedList<T>(IReadOnlyCollection<T> Items, int Count, int PageNumber, int PageSize)
 {
-    public IReadOnlyCollection<T> Items { get; }
-    public int PageNumber { get; }
-    public int TotalPages { get; }
-    public int TotalCount { get; }
-
-    public PaginatedList(IReadOnlyCollection<T> items, int count, int pageNumber, int pageSize)
-    {
-        PageNumber = pageNumber;
-        TotalPages = (int)Math.Ceiling(count / (double)pageSize);
-        TotalCount = count;
-        Items = items;
-    }
+    public int TotalPages { get; } = (int)Math.Ceiling(Count / (double)PageSize);
 
     public bool HasPreviousPage => PageNumber > 1;
 

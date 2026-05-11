@@ -4,30 +4,19 @@ using Microsoft.Extensions.Logging;
 
 namespace MrClean.Application.Common.Behaviors;
 
-public class PerformanceBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
+public class PerformanceBehavior<TRequest, TResponse>(ILogger<TRequest> logger, IUser user, IIdentityService identityService)
+    : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {
-    private readonly Stopwatch _timer;
-    private readonly ILogger<TRequest> _logger;
-    private readonly IUser _user;
-    private readonly IIdentityService _identityService;
-
-    public PerformanceBehavior(
-        ILogger<TRequest> logger,
-        IUser user,
-        IIdentityService identityService)
-    {
-        _timer = new Stopwatch();
-
-        _logger = logger;
-        _user = user;
-        _identityService = identityService;
-    }
+    private readonly Stopwatch _timer = new();
+    private readonly ILogger<TRequest> _logger = logger;
+    private readonly IUser _user = user;
+    private readonly IIdentityService _identityService = identityService;
 
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
         _timer.Start();
 
-        var response = await next();
+        var response = await next(cancellationToken);
 
         _timer.Stop();
 

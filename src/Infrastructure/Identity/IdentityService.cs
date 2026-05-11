@@ -6,24 +6,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MrClean.Infrastructure.Identity;
 
-public class IdentityService : IIdentityService
+public class IdentityService(
+    UserManager<ApplicationUser> userManager,
+    IUserClaimsPrincipalFactory<ApplicationUser> userClaimsPrincipalFactory,
+    IAuthorizationService authorizationService,
+    IApplicationDbContext applicationDbContext) 
+    : IIdentityService
 {
-    private readonly UserManager<ApplicationUser> _userManager;
-    private readonly IUserClaimsPrincipalFactory<ApplicationUser> _userClaimsPrincipalFactory;
-    private readonly IAuthorizationService _authorizationService;
-    private readonly IApplicationDbContext _applicationDbContext;
-
-    public IdentityService(
-        UserManager<ApplicationUser> userManager,
-        IUserClaimsPrincipalFactory<ApplicationUser> userClaimsPrincipalFactory,
-        IAuthorizationService authorizationService,
-        IApplicationDbContext applicationDbContext)
-    {
-        _userManager = userManager;
-        _userClaimsPrincipalFactory = userClaimsPrincipalFactory;
-        _authorizationService = authorizationService;
-        _applicationDbContext = applicationDbContext;
-    }
+    private readonly UserManager<ApplicationUser> _userManager = userManager;
+    private readonly IUserClaimsPrincipalFactory<ApplicationUser> _userClaimsPrincipalFactory = userClaimsPrincipalFactory;
+    private readonly IAuthorizationService _authorizationService = authorizationService;
+    private readonly IApplicationDbContext _applicationDbContext = applicationDbContext;
 
     public async Task<string?> GetUserNameAsync(string userId)
     {
