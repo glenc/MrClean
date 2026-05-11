@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Glen Cooper",
+    "classifications": [
+        "Clean Architecture"
+    ],
+    "name": "Mr Clean Endpoint",
+    "description": "Create a new endpoint",
+    "identity": "MrClean.Solution.Endpoint.CSharp",
+    "groupIdentity": "MrClean.Solution.Endpoint",
+    "shortName": "mrc-endpoint",
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    },
+    "sourceName": "MrCleanEndpoint",
+    "preferNameDirectory": false,
+    "symbols": {
+        "DefaultNamespace": {
+            "type": "bind",
+            "binding": "msbuild:RootNamespace",
+            "replaces": "MrClean",
+            "defaultValue": "MrClean"
+        },
+        "idParam": {
+            "type": "parameter",
+            "datatype": "string",
+            "isRequired": true,
+            "replaces": "IdParam",
+            "defaultValue": "id"
+        }
+    }
+}

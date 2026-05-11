@@ -34,6 +34,16 @@
       }
     },
     {
+      "label": "Create Endpoint",
+      "type": "shell",
+      "hide": false,
+      "command": "dotnet new mrc-endpoint -n ${input:name} -id ${input:id} -o src/WebApi --project src/WebApi/WebApi.csproj",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
       "label": "Create Use Case Tests",
       "type": "shell",
       "hide": false,
@@ -95,6 +105,11 @@
     {
       "id": "rt",
       "description": "Return Type",
+      "type": "promptString"
+    },
+    {
+      "id": "id",
+      "description": "Id Parameter",
       "type": "promptString"
     }
   ]
