@@ -4,7 +4,7 @@
     "classifications": [
         "Clean Architecture"
     ],
-    "name": "Mr Clean Endpoint",
+    "name": "MrClean Endpoint",
     "description": "Create a new endpoint",
     "identity": "MrClean.Solution.Endpoint.CSharp",
     "groupIdentity": "MrClean.Solution.Endpoint",

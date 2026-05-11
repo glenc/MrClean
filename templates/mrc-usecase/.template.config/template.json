@@ -4,7 +4,7 @@
     "classifications": [
         "Clean Architecture"
     ],
-    "name": "Mr Clean Use Case",
+    "name": "MrClean Use Case",
     "description": "Create a new use case",
     "identity": "MrClean.Solution.UseCase.CSharp",
     "groupIdentity": "MrClean.Solution.UseCase",

@@ -4,7 +4,7 @@
     "classifications": [
         "Clean Architecture"
     ],
-    "name": "Mr Clean Use Case Test",
+    "name": "MrClean Use Case Test",
     "description": "Create a new use case test",
     "identity": "MrClean.Solution.Tests.UseCase.CSharp",
     "groupIdentity": "MrClean.Solution.Tests.UseCase",

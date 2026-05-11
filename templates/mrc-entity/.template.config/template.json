@@ -4,7 +4,7 @@
     "classifications": [
         "Clean Architecture"
     ],
-    "name": "Mr Clean Entity",
+    "name": "MrClean Entity",
     "description": "Create a new entity",
     "identity": "MrClean.Solution.Entity.CSharp",
     "groupIdentity": "MrClean.Solution.Entity",

@@ -4,7 +4,7 @@
   "classifications": [
     "Clean Architecture"
   ],
-  "name": "Mr Clean Entity Test",
+  "name": "MrClean Entity Test",
   "description": "Create a new entity test",
   "identity": "MrClean.Solution.Tests.Entity.CSharp",
   "groupIdentity": "MrClean.Solution.Tests.Entity",
