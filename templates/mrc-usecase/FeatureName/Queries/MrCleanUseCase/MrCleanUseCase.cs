@@ -15,16 +15,10 @@ public class MrCleanUseCaseQueryValidator : AbstractValidator<MrCleanUseCaseQuer
     }
 }
 
-public class MrCleanUseCaseQueryHandler : IRequestHandler<MrCleanUseCaseQuery, ReturnType>
+public class MrCleanUseCaseQueryHandler(IApplicationDbContext context, IMapper mapper) : IRequestHandler<MrCleanUseCaseQuery, ReturnType>
 {
-    private readonly IApplicationDbContext _context;
-    private readonly IMapper _mapper;
-
-    public MrCleanUseCaseQueryHandler(IApplicationDbContext context, IMapper mapper)
-    {
-        _context = context;
-        _mapper = mapper;
-    }
+    private readonly IApplicationDbContext _context = context;
+    private readonly IMapper _mapper = mapper;
 
     public async Task<ReturnType> Handle(MrCleanUseCaseQuery request, CancellationToken cancellationToken)
     {

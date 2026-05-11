@@ -1,6 +1,5 @@
 namespace MrClean.FeatureName.Queries.MrCleanUseCase;
 
-public class ReturnType
+public record ReturnType(IReadOnlyCollection<object> Items)
 {
-    public IReadOnlyCollection<object> Items { get; init; } = [];
 }

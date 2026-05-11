@@ -16,16 +16,10 @@ public class MrCleanUseCaseCommandValidator : AbstractValidator<MrCleanUseCaseCo
     }
 }
 
-public class MrCleanUseCaseCommandHandler : IRequestHandler<MrCleanUseCaseCommand, ReturnType>
+public class MrCleanUseCaseCommandHandler(IApplicationDbContext context, IUser user) : IRequestHandler<MrCleanUseCaseCommand, ReturnType>
 {
-    private readonly IApplicationDbContext _context;
-    private readonly IUser _user;
-
-    public MrCleanUseCaseCommandHandler(IApplicationDbContext context, IUser user)
-    {
-        _context = context;
-        _user = user;
-    }
+    private readonly IApplicationDbContext _context = context;
+    private readonly IUser _user = user;
 
     public async Task<ReturnType> Handle(MrCleanUseCaseCommand request, CancellationToken cancellationToken)
     {

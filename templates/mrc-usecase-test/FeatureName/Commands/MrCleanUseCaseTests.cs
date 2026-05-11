@@ -28,7 +28,7 @@ public class MrCleanUseCaseTests : BaseTestFixture
     }
 
     [Test]
-    public async Task ShouldReturnId()
+    public async Task ShouldReturnValidResult()
     {
         var userId = await RunAsDefaultUserAsync();
 
