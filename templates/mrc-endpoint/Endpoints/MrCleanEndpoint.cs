@@ -23,8 +23,8 @@ public class MrCleanEndpoint : IEndpointGroup
         await Task.Yield();
         throw new NotImplementedException();
 
-        var result = null;
-        return TypedResults.Ok(result);
+        // var result = null;
+        // return TypedResults.Ok(result);
     }
 
     public async Task<Ok<object>> Get(ISender sender, int IdParam)
@@ -32,8 +32,8 @@ public class MrCleanEndpoint : IEndpointGroup
         await Task.Yield();
         throw new NotImplementedException();
 
-        var result = null;
-        return TypedResults.Ok(result);
+        // var result = null;
+        // return TypedResults.Ok(result);
     }
 
     public async Task<Created<int>> Create(ISender sender, object command)
@@ -41,8 +41,8 @@ public class MrCleanEndpoint : IEndpointGroup
         await Task.Yield();
         throw new NotImplementedException();
 
-        var result = await sender.Send(command);
-        return TypedResults.Created($"/{nameof(MrCleanEndpoint)}/{result}", result);
+        // var result = await sender.Send(command);
+        // return TypedResults.Created($"/{nameof(MrCleanEndpoint)}/{result}", result);
     }
 
     public async Task<Results<NoContent, BadRequest>> Update(ISender sender, int IdParam, object command)
@@ -50,10 +50,10 @@ public class MrCleanEndpoint : IEndpointGroup
         await Task.Yield();
         throw new NotImplementedException();
         
-        if (IdParam != command.Id) return TypedResults.BadRequest();
+        // if (IdParam != command.Id) return TypedResults.BadRequest();
 
-        await sender.Send(command);
+        // await sender.Send(command);
 
-        return TypedResults.NoContent();
+        // return TypedResults.NoContent();
     }
 }
